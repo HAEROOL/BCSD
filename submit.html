@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <title>panel</title>
+</head>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<body>
+    <div class="container" style="padding-top: 30px;">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#nav_menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span> 
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./login.html">
+                        HOME
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="nav_menu">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="./submit.html">JOIN</a>
+                        </li>
+                        <li>
+                            <a href="">Write</a>
+                        </li>
+                        <li>
+                            <a href="">List</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-6 col-md-offset-3 ">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">회원가입</div>
+                <div class="panel panel-body">
+                    <form action="./register.js" name="register_form" method="POST">
+                        <ul>
+                            <li class="form-inline">
+                                NAME : <input type="text" class="form-control" name="form_name">
+                            </li>
+                            <br>
+                            <li class="form-inline">
+                                ID : <input type="text" class="form-control" name="form_id">
+                            </li>
+                            <br>
+                            <li class="form-inline">
+                                PW : <input type="password" class="form-control" name="form_pw">
+                            </li>
+                            <br>
+                            <li class="form-inline">
+                                Birth : 
+                                <input type="date" min="1980-01-01" max="2021-12-31" name = "date">
+                            </li>
+                            <br>
+                            <br>
+                            <li class="form-inline">
+                                회원가입에 동의하십니까?<br>
+                                <input type="checkbox" id="agreebox" name="form_agree">
+                                <label for="agreebox">
+                                    동의합니다
+                                </label>
+                            </li>
+                        </ul>
+                    </form>
+                    <button class="btn btn-primary center-block" id='register'>Submit</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script src="./register.js"></script>
+</html>
